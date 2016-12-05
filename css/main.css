@@ -1,0 +1,292 @@
+/* Defines how the width and height of the element are calculated: whether they include the padding and borders or not. */
+
+*:before,
+*:after {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -ms-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+body {
+    font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
+    background-color: #0f42a8;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/*------------*/
+
+
+/* Grid */
+.row-full {
+    width: 100%;
+}
+
+.row {
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    clear: both;
+}
+
+
+
+
+/* Common style */
+.Section {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+}
+
+.Icon-Wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1%;
+    padding: 5px;
+}
+
+.Article {
+    color: #fff;
+}
+
+    .Article h2,
+    .Article p {
+        color: inherit;
+    } 
+
+
+
+
+/* Header */
+.Header {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 130px;
+}
+
+    .Header-Inner {
+        overflow: hidden;
+        width: 100%;
+        padding: 20px;
+    }
+
+.Title-Wrapper {
+    display: inline-block;
+    float: left;
+}
+
+    .Title-Main { text-transform: uppercase; }
+
+.Navigation {
+    display: inline-block;
+    float: right;
+}
+
+    .Navigation-List {
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+
+        .Navigation-ListItem {
+            display: inline-block;
+        }
+
+            .Navigation-Link {
+                display: block;
+                padding: 5px;
+                background-color: #0f42a8;
+                color: #fff;
+
+                -webkit-transition: color 300ms;
+                -moz-transition: color 300ms;
+                -ms-transition: color 300ms;
+                transition: color 300ms;
+            }
+
+            .Navigation-Link:hover {
+                color: #0f42a8;
+                background-color: #fff;
+            }
+
+
+
+
+/* Teaser */
+.Section-Teaser {
+    padding-top: 130px;
+    background: url("../img/section-background-teaser.jpg") no-repeat center;
+    background-size: cover;
+}
+
+    .Teaser-Inner {
+        position: relative;
+        height: 100%;
+    }
+
+        .Teaser-Article {
+            vertical-align: middle;
+            display: table-cell;
+        }
+
+            .Teaser-Title {
+                color: #fff;
+                font-size: 2rem;
+                text-shadow: 2px 2px 5px #000;
+            }
+
+
+
+
+/* About */
+.Section-About {
+    background: url("../img/section-background-about.jpg") no-repeat center;
+    background-size: cover;
+}
+
+    .About-Inner {
+        position: relative;
+        text-align: right;
+    }
+
+        .About-Article {
+            vertical-align: middle;
+            display: table-cell;
+            width: 50%;
+        }
+
+
+
+
+/* Mission */
+.Section-Mission {
+    background: url("../img/section-background-mission.jpg") no-repeat center;
+    background-size: cover;
+}
+
+    .Mission-Inner {
+        position: relative;
+        text-align: left;
+    }
+
+        .Mission-Article {
+            vertical-align: middle;
+            width: 50%;
+            display: table-cell;
+        }
+
+
+
+
+/* Booking */
+.Section-Booking {
+    background: url("../img/section-background-booking.jpg") no-repeat center;
+    background-size: cover;
+}
+
+    .Booking-Inner {
+        position: relative;
+    }
+
+        .Form {
+            vertical-align: middle;
+            display: table-cell;
+            width: 50%;
+            padding: 15px;
+        }
+
+            .Form-Fieldset {
+                width: 100%;
+            }
+
+            .input {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+
+            .input--isHidden {
+                display: none;
+            }
+
+            .input .hasError {
+                border: 1px solid red;
+            }
+
+            .input:last-of-type {
+                margin-bottom: 0;
+            }
+
+
+
+/* Footer */
+.Footer {}
+
+ .Footer-linkToTop {
+    color: red;
+
+    -webkit-transition: color 300ms;
+    -moz-transition: color 300ms;
+    -ms-transition: color 300ms;
+    transition: color 300ms;
+ }
+
+    .Footer-linkToTop:hover {
+        color: #fff;
+    }
+
+.icon-hearth {
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("../../Icons/Ionic/android-favorite.svg") no-repeat center;
+    background-size: contain;
+}
+
+.Button {
+    padding: 15px 20px;
+    border: 0;
+    outline: 0;
+    color: #000;
+    background-color: #fff;
+
+    -webkit-transition: color 300ms;
+    -moz-transition: color 300ms;
+    -ms-transition: color 300ms;
+    transition: color 300ms;
+}
+
+.Button:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+
+
+@media only screen and ( max-width: 990px ) {
+    .Article,
+    .Form {
+        width: 100%;
+    }
+}
